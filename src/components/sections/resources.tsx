@@ -24,12 +24,14 @@ export function ResourcesSection() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="card-glass"
             >
-              <div className="text-xs uppercase tracking-[0.3em] text-white/40">{dictionary.resources.tagLabel}</div>
-              <h3 className="text-xl font-semibold text-white">{resource.title}</h3>
-              <p className="text-sm text-white/70">{resource.description}</p>
+              <div className="text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">
+                {dictionary.resources.tagLabel}
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{resource.title}</h3>
+              <p className="text-sm text-slate-600 dark:text-white/70">{resource.description}</p>
               <Link
                 href={resource.href}
-                className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-white"
+                className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 dark:hover:text-white"
               >
                 {dictionary.resources.actionLabel}
               </Link>

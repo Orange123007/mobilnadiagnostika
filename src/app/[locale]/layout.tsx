@@ -27,9 +27,9 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   const locales = getLocales();
-  const locale = params.locale;
+  const locale = locales.find((loc) => loc === params.locale);
 
-  if (!locales.includes(locale as any)) {
+  if (!locale) {
     notFound();
   }
 
@@ -37,8 +37,8 @@ export default function LocaleLayout({
 
   return (
     <AppThemeProvider>
-      <LanguageSetter locale={locale as any} />
-      <TranslationProvider value={{ dictionary, locale: locale as any }}>{children}</TranslationProvider>
+      <LanguageSetter locale={locale} />
+      <TranslationProvider value={{ dictionary, locale }}>{children}</TranslationProvider>
     </AppThemeProvider>
   );
 }

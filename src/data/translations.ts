@@ -25,6 +25,16 @@ export type Dictionary = {
       items: Array<{ name: string; description: string; href: string }>;
     }>;
   };
+  segmentsShowcase: {
+    title: string;
+    description: string;
+    cards: Array<{
+      title: string;
+      description: string;
+      badges: string[];
+      href: string;
+    }>;
+  };
   hero: {
     badge: string;
     title: string;
@@ -51,6 +61,17 @@ export type Dictionary = {
     description: string;
     bullets: string[];
     cta: string;
+  };
+  electro: {
+    title: string;
+    description: string;
+    cards: Array<{
+      title: string;
+      description: string;
+      points: string[];
+      icon: 'battery' | 'shield' | 'chip' | 'radar';
+    }>;
+    metrics: Array<{ label: string; value: string }>;
   };
   search: {
     title: string;
@@ -128,6 +149,37 @@ export const dictionaries: Record<Locale, Dictionary> = {
         }
       ]
     },
+    segmentsShowcase: {
+      title: 'Основни групи автомобили, които обслужваме',
+      description:
+        'Разделихме услугите по ключови сегменти, за да откриете бързо подходящата диагностика – от европейски премиум до американски внос и модерни електромобили.',
+      cards: [
+        {
+          title: 'Немски и европейски лидери',
+          description: 'Audi, BMW, Mercedes, Porsche, VW Group',
+          badges: ['Audi', 'BMW', 'Mercedes', 'Porsche'],
+          href: '#services'
+        },
+        {
+          title: 'Японски и корейски надеждници',
+          description: 'Toyota, Lexus, Honda, Nissan, Hyundai, Kia',
+          badges: ['Toyota', 'Lexus', 'Honda', 'Hyundai'],
+          href: '#services'
+        },
+        {
+          title: 'Внос от САЩ и Канада',
+          description: 'Ford, Chevrolet, RAM, Tesla – проверка преди и след търг',
+          badges: ['Ford', 'Chevrolet', 'RAM', 'Tesla'],
+          href: '#american'
+        },
+        {
+          title: 'Електромобили и хибриди',
+          description: 'Tesla, Nissan Leaf, Toyota Prius, Hyundai Ioniq',
+          badges: ['Tesla', 'Nissan Leaf', 'Prius', 'Ioniq'],
+          href: '#electro'
+        }
+      ]
+    },
     hero: {
       badge: 'Мобилна диагностика до адрес в цяла България',
       title: 'Футуристична автодиагностика за автомобили, които заслужават най-доброто',
@@ -201,6 +253,36 @@ export const dictionaries: Record<Locale, Dictionary> = {
         'Консултация за митнически и регистрационни процедури'
       ],
       cta: 'Заяви проверка на автомобил от САЩ'
+    },
+    electro: {
+      title: 'Електромобили и хибриди под микроскоп',
+      description:
+        'Измерваме здравето на батерията, проверяваме HV безопасността и следим софтуерните ъпдейти, за да сте спокойни при покупка или експлоатация.',
+      cards: [
+        {
+          title: 'State of Health анализ',
+          description: 'Сравняваме капацитет, баланс на клетки и броя цикли спрямо фабрични данни.',
+          points: ['OEM HV тестери', 'Четене на деградация по модул', 'Прогноза за оставащ пробег'],
+          icon: 'battery'
+        },
+        {
+          title: 'HV безопасност и охлаждане',
+          description: 'Термален мониторинг, изолация и охлаждащи кръгове за батерии и инвертори.',
+          points: ['Термокамера за батерии', 'Диагностика на охлаждащи помпи', 'Сертифициран HV екип'],
+          icon: 'shield'
+        },
+        {
+          title: 'Софтуер и автономни системи',
+          description: 'Анализираме OTA ъпдейти, ADAS калибрации и състояние на зарядните системи.',
+          points: ['Firmware сравнения', 'ADAS грешки и адаптации', 'Тест на AC/DC зарядни'],
+          icon: 'chip'
+        }
+      ],
+      metrics: [
+        { label: 'SOH точност', value: '±2% отклонение' },
+        { label: 'EV диагностики месечно', value: '60+' },
+        { label: 'Сертифицирано оборудване', value: 'Tesla, Toyota, BMW i' }
+      ]
     },
     search: {
       title: 'Резултати от търсене',
@@ -308,6 +390,37 @@ export const dictionaries: Record<Locale, Dictionary> = {
         }
       ]
     },
+    segmentsShowcase: {
+      title: 'Flagship segments we specialise in',
+      description:
+        'Discover the diagnostics package that fits your vehicle – from German luxury icons to US auction imports and the latest EV platforms.',
+      cards: [
+        {
+          title: 'German & European excellence',
+          description: 'Audi, BMW, Mercedes-Benz, Porsche, VW Group',
+          badges: ['Audi', 'BMW', 'Mercedes', 'Porsche'],
+          href: '#services'
+        },
+        {
+          title: 'Japanese & Korean reliability',
+          description: 'Toyota, Lexus, Honda, Nissan, Hyundai, Kia',
+          badges: ['Toyota', 'Lexus', 'Honda', 'Hyundai'],
+          href: '#services'
+        },
+        {
+          title: 'US imports & pickups',
+          description: 'Ford, Chevrolet, RAM, Tesla – before and after the auction',
+          badges: ['Ford', 'Chevrolet', 'RAM', 'Tesla'],
+          href: '#american'
+        },
+        {
+          title: 'Electric & hybrid flagships',
+          description: 'Tesla, Nissan Leaf, Toyota Prius, Hyundai Ioniq',
+          badges: ['Tesla', 'Leaf', 'Prius', 'Ioniq'],
+          href: '#electro'
+        }
+      ]
+    },
     hero: {
       badge: 'Mobile diagnostics anywhere in Bulgaria',
       title: 'Futuristic auto diagnostics for vehicles that deserve the best',
@@ -381,6 +494,36 @@ export const dictionaries: Record<Locale, Dictionary> = {
         'Consulting on customs and registration'
       ],
       cta: 'Request a US car inspection'
+    },
+    electro: {
+      title: 'Electric & hybrid intelligence',
+      description:
+        'We handle high-voltage safety, battery health analytics and software validation so you can trust every kWh of performance.',
+      cards: [
+        {
+          title: 'Battery State of Health reports',
+          description: 'Capacity, cell balance and charge history benchmarked against OEM specs.',
+          points: ['OEM HV testers', 'Module-level degradation insight', 'Remaining range projection'],
+          icon: 'battery'
+        },
+        {
+          title: 'HV safety & thermal checks',
+          description: 'Thermal imaging, insulation and coolant loop diagnostics for batteries and inverters.',
+          points: ['Thermal camera scanning', 'Cooling loop diagnostics', 'Certified HV engineers'],
+          icon: 'shield'
+        },
+        {
+          title: 'Software & autonomy validation',
+          description: 'OTA updates, ADAS calibration and charging system health under one playbook.',
+          points: ['Firmware comparisons', 'ADAS fault tracing', 'AC/DC charger testing'],
+          icon: 'chip'
+        }
+      ],
+      metrics: [
+        { label: 'SOH accuracy', value: '±2% variance' },
+        { label: 'EV inspections monthly', value: '60+' },
+        { label: 'Certified tooling', value: 'Tesla, Toyota, BMW i' }
+      ]
     },
     search: {
       title: 'Search results',
@@ -459,6 +602,13 @@ export const searchItems: Record<Locale, SearchItem[]> = {
       href: '#contact'
     },
     {
+      id: 'segments-overview',
+      title: 'Категории автомобили',
+      description: 'Водещи групи марки и сегменти, които покриваме.',
+      category: 'Категории',
+      href: '#segments'
+    },
+    {
       id: 'us-import',
       title: 'Проверка на автомобил от САЩ',
       description: 'VIN репорти, анализ на снимки и оценка на щети.',
@@ -487,6 +637,13 @@ export const searchItems: Record<Locale, SearchItem[]> = {
       description: 'Request form and instant engineer contact.',
       category: 'CTA',
       href: '#contact'
+    },
+    {
+      id: 'segments-overview',
+      title: 'Vehicle segments',
+      description: 'Explore the flagship brands and groups we support.',
+      category: 'Segments',
+      href: '#segments'
     },
     {
       id: 'us-import',

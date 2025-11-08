@@ -23,8 +23,8 @@ export function HighlightsSection() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="card-glass"
             >
-              <h3 className="text-xl font-semibold text-white">{highlight.title}</h3>
-              <p className="text-sm text-white/70">{highlight.description}</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{highlight.title}</h3>
+              <p className="text-sm text-slate-600 dark:text-white/70">{highlight.description}</p>
             </motion.div>
           ))}
         </div>

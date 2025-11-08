@@ -15,7 +15,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="glass-button text-xs uppercase tracking-[0.3em] text-white"
+          className="glass-button text-xs uppercase tracking-[0.3em] text-slate-800 dark:text-white"
         >
           {dictionary.hero.badge}
         </motion.span>
@@ -31,7 +31,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="max-w-3xl text-lg text-slate-300"
+          className="max-w-3xl text-lg text-slate-600 dark:text-slate-300"
         >
           {dictionary.hero.subtitle}
         </motion.p>
@@ -49,7 +49,7 @@ export function HeroSection() {
           </Link>
           <Link
             href="#american"
-            className="glass-button px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/80"
+            className="glass-button px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-700 dark:text-white/80"
           >
             {dictionary.hero.ctas.secondary}
           </Link>
@@ -58,7 +58,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-xs uppercase tracking-[0.3em] text-white/40"
+          className="text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40"
         >
           {dictionary.hero.trustedBy}
         </motion.p>

@@ -24,9 +24,9 @@ export function ServicesSection() {
               className="card-glass"
               id={index === 1 ? 'electro' : undefined}
             >
-              <h3 className="text-xl font-semibold text-white">{card.title}</h3>
-              <p className="text-sm text-white/70">{card.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-white/60">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{card.title}</h3>
+              <p className="text-sm text-slate-600 dark:text-white/70">{card.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-white/60">
                 {card.points.map((point) => (
                   <li key={point} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>

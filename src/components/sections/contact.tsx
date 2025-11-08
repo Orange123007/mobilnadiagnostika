@@ -20,25 +20,25 @@ export function ContactSection() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="section-title mb-6">{dictionary.cta.title}</h2>
-              <p className="text-base text-white/70">{dictionary.cta.description}</p>
-              <div className="mt-10 grid gap-4 text-sm text-white/80">
+              <p className="text-base text-slate-600 dark:text-white/70">{dictionary.cta.description}</p>
+              <div className="mt-10 grid gap-4 text-sm text-slate-700 dark:text-white/80">
                 <a
                   href="tel:+359888000000"
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10"
+                  className="flex items-center gap-3 rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
                   <Phone className="h-5 w-5 text-primary" />
                   +359 888 000 000
                 </a>
                 <a
                   href="mailto:contact@mobilnadiagnostika.bg"
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10"
+                  className="flex items-center gap-3 rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
                   <Mail className="h-5 w-5 text-primary" />
                   contact@mobilnadiagnostika.bg
                 </a>
                 <a
                   href="viber://chat?number=%2B359888000000"
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10"
+                  className="flex items-center gap-3 rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
                   <MessageCircle className="h-5 w-5 text-primary" />
                   Viber Chat
@@ -48,43 +48,43 @@ export function ContactSection() {
             <form className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
-                  <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-white/40">Име / Name</label>
+                  <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">Име / Name</label>
                   <input
                     type="text"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
+                    className="w-full rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-500 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40"
                     placeholder=""
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-white/40">Телефон / Phone</label>
+                  <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">Телефон / Phone</label>
                   <input
                     type="tel"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
+                    className="w-full rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-500 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40"
                     placeholder=""
                   />
                 </div>
               </div>
               <div>
-                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-white/40">Имейл / Email</label>
+                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">Имейл / Email</label>
                 <input
                   type="email"
-                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
+                  className="w-full rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-500 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40"
                   placeholder=""
                 />
               </div>
               <div>
-                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-white/40">Какъв автомобил?</label>
+                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">Какъв автомобил?</label>
                 <input
                   type="text"
-                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
+                  className="w-full rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-500 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40"
                   placeholder="BMW X5, Toyota Prius, Tesla Model Y..."
                 />
               </div>
               <div>
-                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-white/40">Описание</label>
+                <label className="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-white/40">Описание</label>
                 <textarea
                   rows={4}
-                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
+                  className="w-full rounded-2xl border border-slate-900/10 bg-white/80 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-500 focus:border-primary focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40"
                   placeholder="Разкажете какъв тип диагностика или проверка е нужна"
                 />
               </div>
