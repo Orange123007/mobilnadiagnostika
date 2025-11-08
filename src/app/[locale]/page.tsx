@@ -1,8 +1,10 @@
 import { Header } from '@/components/header';
 import { HeroSection } from '@/components/sections/hero';
 import { HighlightsSection } from '@/components/sections/highlights';
+import { SegmentsSection } from '@/components/sections/segments';
 import { ServicesSection } from '@/components/sections/services';
 import { AmericanSection } from '@/components/sections/american';
+import { ElectroSection } from '@/components/sections/electro';
 import { CoverageSection } from '@/components/sections/coverage';
 import { FAQSection } from '@/components/sections/faq';
 import { ResourcesSection } from '@/components/sections/resources';
@@ -18,8 +20,10 @@ export default function LocaleHomePage() {
         <Header />
         <main className="flex-1 space-y-16 pb-16">
           <HeroSection />
+          <SegmentsSection />
           <HighlightsSection />
           <ServicesSection />
+          <ElectroSection />
           <AmericanSection />
           <CoverageSection />
           <FAQSection />
