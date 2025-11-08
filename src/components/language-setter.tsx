@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import type { Locale } from '@/data/translations';
+import type { Locale } from '@/lib/translation-context';
 
 export function LanguageSetter({ locale }: { locale: Locale }) {
   useEffect(() => {

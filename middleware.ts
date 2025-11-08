@@ -1,30 +1,27 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-const PUBLIC_FILE = /\.(.*)$/;
-const LOCALES = ['bg', 'en'];
-const DEFAULT_LOCALE = 'bg';
+const locales = ["bg", "en"] as const;
+const defaultLocale = "bg";
 
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+export function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith('/_next') || pathname.startsWith('/api')) {
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    /\.[\w]+$/.test(pathname)
+  ) {
     return NextResponse.next();
   }
 
-  if (PUBLIC_FILE.test(pathname)) {
+  if (locales.some((l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`))) {
     return NextResponse.next();
   }
 
-  const hasLocale = LOCALES.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
-
-  if (!hasLocale) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/${DEFAULT_LOCALE}${pathname === '/' ? '' : pathname}`;
-    return NextResponse.redirect(url, 307);
-  }
-
-  return NextResponse.next();
+  const url = req.nextUrl.clone();
+  url.pathname = `/${defaultLocale}${pathname}`;
+  return NextResponse.redirect(url);
 }
+
+export const config = { matcher: ["/((?!_next|.*\\..*).*)"] };

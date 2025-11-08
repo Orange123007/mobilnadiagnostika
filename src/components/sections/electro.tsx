@@ -24,7 +24,8 @@ export function ElectroSection() {
         <div className="mt-12 grid gap-6 lg:grid-cols-[2fr_1fr]">
           <div className="grid gap-6 md:grid-cols-2">
             {electro.cards.map((card) => {
-              const Icon = iconMap[card.icon];
+              const iconKey = card.icon as keyof typeof iconMap;
+              const Icon = iconMap[iconKey] ?? BatteryCharging;
               return (
                 <div
                   key={card.title}

@@ -1,44 +1,39 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { AppThemeProvider } from '@/components/theme-provider';
-import { LanguageSetter } from '@/components/language-setter';
-import { getDictionary, getLocales } from '@/lib/get-dictionary';
-import { TranslationProvider } from '@/lib/translation-context';
+import "../globals.css";
+import type { Metadata } from "next";
+import { Manrope, Orbitron } from "next/font/google";
+import type { ReactNode } from "react";
+import { AppThemeProvider } from "@/components/theme-provider";
+import { TranslationProvider } from "@/lib/translation-context";
+import bg from "@/locales/bg.json";
+import en from "@/locales/en.json";
 
-export const dynamicParams = false;
+const manrope = Manrope({ subsets: ["latin", "cyrillic"], variable: "--font-manrope" });
+const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
-export function generateStaticParams() {
-  return getLocales().map((locale) => ({ locale }));
-}
-
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
-  const dictionary = getDictionary(params.locale);
-  return {
-    title: dictionary.hero.title,
-    description: dictionary.hero.subtitle
-  };
-}
+export const metadata: Metadata = {
+  title: "Mobilna Diagnostika",
+  description: "Автодиагностика на място"
+};
 
 export default function LocaleLayout({
   children,
   params
 }: {
-  children: React.ReactNode;
-  params: { locale: string };
+  children: ReactNode;
+  params: { locale: "bg" | "en" };
 }) {
-  const locales = getLocales();
-  const locale = locales.find((loc) => loc === params.locale);
-
-  if (!locale) {
-    notFound();
-  }
-
-  const dictionary = getDictionary(locale);
+  const { locale } = params;
+  const dictionary = locale === "bg" ? bg : en;
 
   return (
-    <AppThemeProvider>
-      <LanguageSetter locale={locale} />
-      <TranslationProvider value={{ dictionary, locale }}>{children}</TranslationProvider>
-    </AppThemeProvider>
+    <html lang={locale} className={`${manrope.variable} ${orbitron.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen bg-slate-950 font-sans text-white">
+        <AppThemeProvider>
+          <TranslationProvider value={{ locale, dictionary }}>
+            {children}
+          </TranslationProvider>
+        </AppThemeProvider>
+      </body>
+    </html>
   );
 }
