@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "services": "Services",
+    "categories": "Segments",
+    "usps": "Why us",
+    "knowledge": "Resources",
+    "contact": "Contact",
+    "language": "EN",
+    "searchPlaceholder": "Search the site"
+  },
+  "megaMenu": {
+    "segments": [
+      {
+        "title": "European excellence",
+        "description": "Deep diagnostics for VAG, BMW, Mercedes, French and Italian manufacturers.",
+        "items": [
+          { "name": "German premium", "description": "BMW, Mercedes-Benz, Audi, Porsche", "href": "#services" },
+          { "name": "VAG group", "description": "VW, Skoda, Seat, Cupra, Bentley", "href": "#services" },
+          { "name": "French & Italian", "description": "Renault, Peugeot, Citroën, Fiat, Alfa Romeo", "href": "#services" }
+        ]
+      },
+      {
+        "title": "Japanese & Korean",
+        "description": "Dedicated procedures for Toyota/Lexus, Honda, Nissan, Hyundai/Kia.",
+        "items": [
+          { "name": "Hybrids & EV", "description": "Toyota Hybrid, Lexus, Nissan Leaf", "href": "#electro" },
+          { "name": "Sport & JDM", "description": "Subaru STI, Nissan Z, Honda Type R", "href": "#services" },
+          { "name": "Korean premium", "description": "Genesis, Kia GT Line, Hyundai N", "href": "#services" }
+        ]
+      },
+      {
+        "title": "US imports",
+        "description": "Support for Copart & IAAI vehicles including EVs and pickups.",
+        "items": [
+          { "name": "Pre-auction check", "description": "VIN, CarVertical, CarFax analysis", "href": "#american" },
+          { "name": "Damage assessment", "description": "Repair calculation, hidden issues", "href": "#american" },
+          { "name": "US-based EVs", "description": "Tesla, Rivian, Lucid", "href": "#electro" }
+        ]
+      }
+    ]
+  },
+  "segmentsShowcase": {
+    "title": "Flagship segments we specialise in",
+    "description": "Discover the diagnostics package that fits your vehicle – from German luxury icons to US auction imports and the latest EV platforms.",
+    "cards": [
+      {
+        "title": "German & European excellence",
+        "description": "Audi, BMW, Mercedes-Benz, Porsche, VW Group",
+        "badges": ["Audi", "BMW", "Mercedes", "Porsche"],
+        "href": "#services"
+      },
+      {
+        "title": "Japanese & Korean reliability",
+        "description": "Toyota, Lexus, Honda, Nissan, Hyundai, Kia",
+        "badges": ["Toyota", "Lexus", "Honda", "Hyundai"],
+        "href": "#services"
+      },
+      {
+        "title": "US imports & pickups",
+        "description": "Ford, Chevrolet, RAM, Tesla – before and after the auction",
+        "badges": ["Ford", "Chevrolet", "RAM", "Tesla"],
+        "href": "#american"
+      },
+      {
+        "title": "Electric & hybrid flagships",
+        "description": "Tesla, Nissan Leaf, Toyota Prius, Hyundai Ioniq",
+        "badges": ["Tesla", "Leaf", "Prius", "Ioniq"],
+        "href": "#electro"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "Mobile diagnostics anywhere in Bulgaria",
+    "title": "Futuristic auto diagnostics for vehicles that deserve the best",
+    "subtitle": "We merge OEM tooling, real-time telematics and 15+ years expertise to deliver crystal-clear insights before you buy, service or bid.",
+    "ctas": { "primary": "Book a diagnostic", "secondary": "Verify a US import" },
+    "trustedBy": "Trusted by premium fleet owners, dealers and importers"
+  },
+  "highlightsIntro": {
+    "title": "Technology & edge",
+    "description": "Dealer-grade tooling, cloud analytics and 24/7 concierge deliver complete transparency."
+  },
+  "highlights": [
+    {
+      "title": "OEM & Remote Cloud Diagnostics",
+      "description": "Dealer-level software, online coding and adaptations for the newest platforms."
+    },
+    {
+      "title": "AI auction damage analysis",
+      "description": "We match Copart/IAAI imagery with OEM specs and damage databases."
+    },
+    {
+      "title": "24/7 Tech Concierge",
+      "description": "Instant access to an engineer via Viber, WhatsApp and e-mail. SLA response under 30 minutes."
+    }
+  ],
+  "services": {
+    "title": "Segments & services",
+    "description": "An engineering-grade approach to diagnostics across vehicle classes with focus on software, electronics and hybrid systems.",
+    "cards": [
+      {
+        "title": "Premium European brands",
+        "description": "OEM testers dedicated to VAG, BMW, Mercedes, Porsche and more.",
+        "points": [
+          "Dynamic road tests and remote coding",
+          "OTA updates & ADAS calibration",
+          "Fleet support and digital reporting"
+        ]
+      },
+      {
+        "title": "Japanese/Korean hybrids & EV",
+        "description": "High-voltage analysis, SOH tests and thermal profiling.",
+        "points": [
+          "Battery & inverter assessment",
+          "Support for Toyota/Lexus, Nissan, Hyundai/Kia, Honda",
+          "Inspection of chargers and HV safety"
+        ]
+      },
+      {
+        "title": "US auction vehicles",
+        "description": "Full dossier before purchase, option decoding and repair tracing.",
+        "points": [
+          "VIN report + AI photo analysis",
+          "Hidden defects across electronics and airbags",
+          "Logistics coordination to Bulgaria"
+        ]
+      }
+    ]
+  },
+  "american": {
+    "title": "Spotlight: US imported vehicles",
+    "description": "We build a digital dossier for every auction car: damage modelling, recall lookup and recovery cost simulation.",
+    "bullets": [
+      "Aggregating Carfax, Copart, IAAI and insurance records",
+      "360° inspection of electric & autonomous systems",
+      "Consulting on customs and registration"
+    ],
+    "cta": "Request a US car inspection"
+  },
+  "electro": {
+    "title": "Electric & hybrid intelligence",
+    "description": "We handle high-voltage safety, battery health analytics and software validation so you can trust every kWh of performance.",
+    "cards": [
+      {
+        "title": "Battery State of Health reports",
+        "description": "Capacity, cell balance and charge history benchmarked against OEM specs.",
+        "points": ["OEM HV testers", "Module-level degradation insight", "Remaining range projection"],
+        "icon": "battery"
+      },
+      {
+        "title": "HV safety & thermal checks",
+        "description": "Thermal imaging, insulation and coolant loop diagnostics for batteries and inverters.",
+        "points": ["Thermal camera scanning", "Cooling loop diagnostics", "Certified HV engineers"],
+        "icon": "shield"
+      },
+      {
+        "title": "Software & autonomy validation",
+        "description": "OTA updates, ADAS calibration and charging system health under one playbook.",
+        "points": ["Firmware comparisons", "ADAS fault tracing", "AC/DC charger testing"],
+        "icon": "chip"
+      }
+    ],
+    "metrics": [
+      { "label": "SOH accuracy", "value": "±2% variance" },
+      { "label": "EV inspections monthly", "value": "60+" },
+      { "label": "Certified tooling", "value": "Tesla, Toyota, BMW i" }
+    ]
+  },
+  "search": {
+    "title": "Search results",
+    "empty": "No matches found. Try a different keyword.",
+    "items": [
+      {
+        "id": "book-diagnostic",
+        "title": "Book a mobile diagnostic",
+        "description": "Request form and instant engineer contact.",
+        "category": "CTA",
+        "href": "#contact"
+      },
+      {
+        "id": "segments-overview",
+        "title": "Vehicle segments",
+        "description": "Explore the flagship brands and groups we support.",
+        "category": "Segments",
+        "href": "#segments"
+      },
+      {
+        "id": "us-import",
+        "title": "Inspect a US import",
+        "description": "VIN reporting, image analysis and damage modelling.",
+        "category": "US vehicles",
+        "href": "#american"
+      },
+      {
+        "id": "hybrid-services",
+        "title": "Hybrid & EV diagnostics",
+        "description": "SOH testing, HV systems, charging modules.",
+        "category": "Hybrid & EV",
+        "href": "#electro"
+      },
+      {
+        "id": "fleet-support",
+        "title": "Fleet support",
+        "description": "Tailored programmes for corporate fleets.",
+        "category": "Business",
+        "href": "#services"
+      }
+    ]
+  },
+  "coverage": {
+    "title": "Coverage map",
+    "description": "Mobile teams positioned in Sofia, Plovdiv, Varna, Burgas and Pleven with nationwide onsite capability.",
+    "label": "Core hubs",
+    "cities": ["Sofia", "Plovdiv", "Varna", "Burgas", "Pleven", "Ruse"]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "Answers to common questions about mobile diagnostics, US import checks and booking workflow.",
+    "items": [
+      {
+        "question": "How does the mobile diagnostic visit work?",
+        "answer": "Our team arrives with full OEM tooling, performs visual inspection, OBD reading, dynamic tests and sends you a digital report with recommendations."
+      },
+      {
+        "question": "Can you check a car before an auction bid?",
+        "answer": "Yes. We provide remote analysis based on imagery and data, and we can arrange onsite inspection through trusted partners."
+      },
+      {
+        "question": "Do you handle EV diagnostics?",
+        "answer": "Absolutely. We are certified for HV systems and deliver in-depth reports for batteries, BMS and charging modules."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Knowledge hub",
+    "description": "Guides and checklists designed to support better automotive decisions.",
+    "tagLabel": "Resource",
+    "actionLabel": "Download",
+    "items": [
+      {
+        "title": "Copart auction checklist",
+        "description": "20 critical points we verify before bidding.",
+        "href": "#"
+      },
+      {
+        "title": "Hybrid diagnostic handbook",
+        "description": "How we evaluate SOH and risks when buying a used hybrid.",
+        "href": "#"
+      },
+      {
+        "title": "Mobile diagnostic roadmap",
+        "description": "From request, onsite visit, report delivery to follow-up.",
+        "href": "#"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for a tech-first diagnostic?",
+    "description": "Reach out via phone, Viber or submit a request. We respond within 30 minutes.",
+    "button": "Contact the team"
+  },
+  "footer": {
+    "tagline": "Next-gen mobile diagnostics",
+    "rights": "© 2024 MobilnaDiagnostika. All rights reserved."
+  }
+}
