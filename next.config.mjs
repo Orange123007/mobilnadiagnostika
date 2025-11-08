@@ -1,12 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: true
-  },
-  i18n: {
-    locales: ['bg', 'en'],
-    defaultLocale: 'bg'
-  }
+  reactStrictMode: true
+  // Никакъв output:'export' и никакви experimental.serverActions
 };
-
 export default nextConfig;
